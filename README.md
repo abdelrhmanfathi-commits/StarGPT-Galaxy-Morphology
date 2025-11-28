@@ -33,6 +33,7 @@ Utilizing the **Galaxy Zoo 2 (GZ2)** dataset and the pre-trained **Zoobot (ConvN
 ---
 
 ## 📂 Repository Structure
+```text
 StarGPT/
 │
 ├── notebooks/                  # Source Code
@@ -40,13 +41,18 @@ StarGPT/
 │   └── 2_Ablation_Study.ipynb       <-- Optimization runs (Focal Loss/Oversampling)
 │
 ├── results/                    # Generated Plots & Metrics
-│   ├── confusion_matrix.png
-│   ├── auroc_per_class.png
-│   └── learning_curve.png
+│   ├── 1_Baseline_Training.ipynb    
+│         ├── confusion_matrix.png
+│         ├── auroc_per_class.png
+│         └── learning_curve.png
+│   └── 2_Ablation_Study.ipynb      
+│         ├── confusion_matrix.png
+│         ├── auroc_per_class.png
+│         └── learning_curve.png
 │
 ├── requirements.txt            # Python Dependencies
 └── README.md                   # Project Documentation
-
+```
 ---
 
 ## 📊 Dataset
@@ -105,3 +111,4 @@ model.eval()
 1. Zoobot: Walmsley, M. et al. "Zoobot: A convolutional neural network for galaxy morphology."
 2. Galaxy Zoo 2: Willett, K. W. et al. MNRA (2013).
 3. Frameworks: PyTorch Lightning, Hugging Face Datasets.
+
