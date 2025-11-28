@@ -1,70 +1,15 @@
-# @title Install & Set-Up (Run this first)
-# ===============================================
-# 1. FULL CLEANUP (Remove all conflicts)
-# ===============================================
-!pip uninstall -y -q \
-    torch torchvision torchaudio \
-    lightning pytorch-lightning torchmetrics \
-    zoobot zoobot-pytorch galaxy-datasets \
-    timm datasets scikit-learn pandas numpy pillow \
-    matplotlib seaborn joblib scipy transformers \
-    pyarrow nvidia-cublas-cu12
-
-# ===============================================
-# 2. INSTALL PYTORCH (GPU) — OFFICIAL
-# ===============================================
-!pip install --quiet --no-cache-dir \
-    torch==2.4.1+cu121 torchvision==0.19.1+cu121 torchaudio==2.4.1+cu121 \
-    --index-url https://download.pytorch.org/whl/cu121
-
-# ===============================================
-# 3. CORE SCIENTIFIC STACK (Safe Versions)
-# ===============================================
-!pip install --quiet --no-cache-dir \
-    numpy==1.26.4 \
-    pandas==2.2.2 \
-    pillow==10.4.0 \
-    matplotlib==3.8.4 \
-    seaborn==0.13.2 \
-    scikit-learn==1.5.0 \
-    scipy==1.14.1
-
-# ===============================================
-# 4. LIGHTNING + TORCHMETRICS
-# ===============================================
-!pip install --quiet --no-cache-dir \
-    lightning==2.5.6 \
-    torchmetrics==1.4.0
-
-# ===============================================
-# 5. HUGGING FACE DATASETS
-# ===============================================
-!pip install --quiet --no-cache-dir \
-    datasets==2.21.0
-
-# ===============================================
-# 6. ZOOBOT (CRITICAL — CORRECT PACKAGE)
-# ===============================================
-!pip install --quiet --no-cache-dir \
-    zoobot==2.9.0 \
-    timm
-
-# ===============================================
-# 7. FINAL VERIFICATION
-# ===============================================
-print("\nSTAR GPT INSTALLER COMPLETE!")
-print("ACTION REQUIRED: Runtime → Restart session")
-print("Then run your main notebook.")
-
-try:
-    import torch
-    import lightning.pytorch as L
-    from zoobot.pytorch.training import finetune
-    from torchmetrics.classification import AUROC
-    from datasets import load_dataset
-    import sklearn
-    print("ALL IMPORTS SUCCESSFUL!")
-    print(f"PyTorch: {torch.__version__} | CUDA: {torch.cuda.is_available()}")
-    print(f"Zoobot: {finetune.__module__}")
-except Exception as e:
-    print(f"Import test failed: {e}")
+torch>=2.4.1
+torchvision>=0.19.1
+torchaudio>=2.4.1
+lightning==2.5.6
+torchmetrics==1.4.0
+zoobot==2.9.0
+timm
+datasets==2.21.0
+numpy==1.26.4
+pandas==2.2.2
+pillow==10.4.0
+matplotlib==3.8.4
+seaborn==0.13.2
+scikit-learn==1.5.0
+scipy==1.14.1
