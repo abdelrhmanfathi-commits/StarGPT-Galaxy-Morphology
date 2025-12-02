@@ -6,10 +6,10 @@
 ---
 
 ## 👥 Group Members
-1. **Maryam Al Mesmari** (100067995)
-2. **Nada Kawde** (100066960)
-3. **Mohammed Ali Alyafeai** (100067967)
-4. **Abdelrhman Fathi Abdelfatah** (100065777)
+1. **Maryam Al Mesmari**
+2. **Nada Kawde**
+3. **Mohammed Ali Alyafeai**
+4. **Abdelrhman Fathi Abdelfatah** 
 
 ---
 
@@ -66,15 +66,17 @@ We utilize the **Galaxy Zoo 2 (GZ2)** dataset hosted on Hugging Face.
 ## 📈 Key Results
 
 ### 1. Quantitative Metrics
-| Run Type | Accuracy | Artifact Recall | Notes |
+| Run Type | Accuracy | Smooth Recall | Artifact Recall |
 | :--- | :--- | :--- | :--- |
-| **Baseline (Cross Entropy)** | 89.9% | Low | High global accuracy, but biased toward "Smooth". |
-| **Oversampling** | 88.2% | **High** | "Accuracy Paradox" - lower global accuracy but better at finding rare galaxies. |
-| **Focal Loss (Best)** | **90.5%** | Medium-High | Best balance of stability and sensitivity. |
+| **Baseline (Cross Entropy)** | 89.9% | 0.97 | 0.04 | 
+| **Oversampling** | 88.6% | 0.94 | 0.31 |
+| **Focal Loss** | **90.01%** | 0.98 | 0.04| 
+| **Both** | **88.6%** | 0.94 | 0.31| 
 
+### Note: Smooth is the most frequent class in the dataset (=25100), and Artificial is the least frequent (=835)
 ### 2. Visualizations
 **Confusion Matrix (Baseline):**
-![Confusion Matrix](results/confusion_matrix.png)
+![Confusion Matrix](results/1_Baseline_Training/confusion_matrix.png)
 *(Note: Please ensure confusion_matrix.png is uploaded to the results/ folder)*
 
 ---
@@ -111,4 +113,5 @@ model.eval()
 1. Zoobot: Walmsley, M. et al. "Zoobot: A convolutional neural network for galaxy morphology."
 2. Galaxy Zoo 2: Willett, K. W. et al. MNRA (2013).
 3. Frameworks: PyTorch Lightning, Hugging Face Datasets.
+
 
