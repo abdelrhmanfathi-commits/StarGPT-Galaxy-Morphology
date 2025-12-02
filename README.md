@@ -77,7 +77,12 @@ We utilize the **Galaxy Zoo 2 (GZ2)** dataset hosted on Hugging Face.
 ### 2. Visualizations
 **Confusion Matrix (Baseline):**
 ![Confusion Matrix](results/1_Baseline_Training/confusion_matrix.png)
-*(Note: Please ensure confusion_matrix.png is uploaded to the results/ folder)*
+
+**Learning Curve (Baseline):**
+![Confusion Matrix](results/1_Baseline_Training/learning_curve.png)
+
+**Auroc Per Class (Baseline):**
+![Confusion Matrix](results/1_Baseline_Training/auroc_per_class.png)
 
 ---
 
@@ -113,5 +118,6 @@ model.eval()
 1. Zoobot: Walmsley, M. et al. "Zoobot: A convolutional neural network for galaxy morphology."
 2. Galaxy Zoo 2: Willett, K. W. et al. MNRA (2013).
 3. Frameworks: PyTorch Lightning, Hugging Face Datasets.
+
 
 
