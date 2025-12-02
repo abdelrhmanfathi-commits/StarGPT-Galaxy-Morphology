@@ -41,14 +41,23 @@ StarGPT/
 │   └── 2_Ablation_Study.ipynb       <-- Optimization runs (Focal Loss/Oversampling)
 │
 ├── results/                    # Generated Plots & Metrics
-│   ├── 1_Baseline_Training.ipynb    
+│   ├── 1_Baseline_Training/    
 │         ├── confusion_matrix.png
 │         ├── auroc_per_class.png
 │         └── learning_curve.png
-│   └── 2_Ablation_Study.ipynb      
-│         ├── confusion_matrix.png
-│         ├── auroc_per_class.png
-│         └── learning_curve.png
+│   └── 2_Ablation_Study/   
+│         ├── A_over_sampling_run/
+│               ├── confusion_matrix.png
+│               ├── auroc_per_class.png
+│               └── learning_curve.png
+│         ├── B_focal_loss_run/
+│               ├── confusion_matrix.png
+│               ├── auroc_per_class.png
+│               └── learning_curve.png
+│         ├── C_both_run/
+│               ├── confusion_matrix.png
+│               ├── auroc_per_class.png
+│               └── learning_curve.png
 │
 ├── requirements.txt            # Python Dependencies
 └── README.md                   # Project Documentation
@@ -118,6 +127,7 @@ model.eval()
 1. Zoobot: Walmsley, M. et al. "Zoobot: A convolutional neural network for galaxy morphology."
 2. Galaxy Zoo 2: Willett, K. W. et al. MNRA (2013).
 3. Frameworks: PyTorch Lightning, Hugging Face Datasets.
+
 
 
 
